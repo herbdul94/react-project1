@@ -1,17 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+//You use ./ when you are importing a file
+import App from './App'
+
+//The strictmode below is like a police, making sure we are following the react rules
+ReactDom.render(
+    <React.StrictMode>
+     <App/>
+    </React.StrictMode>, document.getElementById('root')
 );
+/*
+//To create a component each word has to begin with caps just like the way App.js begins with caps. Another way to call or create a component is below
+function MyComponent() {
+    return ( <div>
+        <h1> Hello, this is my first Component </h1>   
+        </div>
+    );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+}
+//render takes two parameters the component you are rendering and the div receiving the component
+ReactDom.render(<MyComponent /> , document.getElementById('myDiv'));
+*/
